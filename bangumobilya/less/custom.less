@@ -1,0 +1,72 @@
+// out: ../css/custom.css, sourcemap: true, compress: false
+html {
+    padding: 50px;
+    font-family: sans-serif;
+
+    h1 {text-align: center;}
+    h2 {text-align: center; color: grey;}
+}
+#exampleSlider {
+	position: relative;
+	border: 1px solid black;
+
+	@media (max-width: 767px) { border-color: transparent; }
+
+	.MS-content {
+		margin: 15px 5%;
+		overflow: hidden;
+		white-space: nowrap;
+		border: 1px solid red;
+
+		@media (max-width: 767px) { margin: 0; }
+
+		.item {
+			display: inline-block;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			vertical-align: top;
+			border:1px solid green;
+            border-right: none;
+
+			width: 20%;
+			@media (max-width: 1200px) { width: 25%; }
+			@media (max-width: 992px) { width: 33.3333%; }
+			@media (max-width: 767px) { width: 50%; }
+
+			p {
+				font-size: 30px;
+				text-align: center;
+				line-height: 1;
+				vertical-align: middle;
+				margin: 0;
+				padding: 10px 0;
+			}
+		}
+	}
+	.MS-controls {
+		button {
+			position: absolute;
+		    border: none;
+		    background: transparent;
+		    font-size: 30px;
+			outline: 0;
+			top: 35px;
+
+			@media (max-width: 767px) { display: none; }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+		}
+		.MS-left {
+			left: 10px;
+			@media (max-width: 992px) { left: -2px; }
+		}
+		.MS-right {
+			right: 10px;
+			@media (max-width: 992px) { right: -2px; }
+		}
+	}
+}
